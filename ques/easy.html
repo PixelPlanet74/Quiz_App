@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body onload="nextQuestion()">
+
+    <div class="signup">
+
+        <h1 class="heading">Level: Easy</h1>
+        <br><br><br>
+        <div class="container">
+            <div class="container">
+
+
+
+
+
+
+                <p id="displayQues" class="displayQuestion"></p>
+                <div class="timer-container">
+                    <div class="timer-bar" id="timer-bar"></div>
+                </div>
+                <br>
+
+                <div class="opt1">
+
+                    <button id="ppt" class="opt-st" onclick="clicked()">
+                        <input class="edit" type="radio" value="1" name="options">
+                        <label id="opt1"></label>
+                    </button>
+                </div>
+                <br>
+
+                <div class="opt2">
+
+                    <button id="ppt" class="opt-st" onclick="clicked()">
+                        <input class="edit" type="radio" value="2" name="options">
+                        <label id="opt2"></label>
+                    </button>
+                </div>
+                <br>
+                <div class="opt3">
+
+                    <button id="ppt" class="opt-st" onclick="clicked()">
+                        <input class="edit" type="radio" value="3" name="options">
+                        <label id="opt3"></label>
+                    </button>
+                </div>
+                <br>
+                <div class="opt4">
+
+                    <button id="ppt" class="opt-st" onclick="clicked()">
+                        <input class="edit" type="radio" value="4" name="options">
+                        <label id="opt4"></label>
+                    </button>
+                </div>
+                <br>
+
+                <br>
+                <br>
+
+                <button id="btn" disabled onclick="nextQuestion()" class="button equalBtn">Next</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+question:"Which JavaScript operator is used for exponentiation?"
+a. +
+b. -
+c. *
+d. ** (double asterisk)
+
+**Answer: d. ** (double asterisk)
+
+question:"How do you check if a variable is less than or equal to a specific value in JavaScript?"
+a. <=
+b. <
+c. >=
+d. >
+
+**Answer: a. <=
+
+question:"What is the result of the expression "5 % 2" in JavaScript?"
+a. 3
+b. 2.5
+c. 0
+d. 2
+
+**Answer: c. 0
+
+question:"How can you remove the last element from an array in JavaScript?"
+a. array.pop()
+b. array.shift()
+c. array.splice(-1, 1)
+d. array.pop(-1)
+
+**Answer: a. array.pop()
+
+question:"Which loop in JavaScript is used for iterating over the properties of an object?"
+a. for loop
+b. while loop
+c. for...in loop
+d. do...while loop
+
+**Answer: c. for...in loop
+
+question:"What method is used to convert a number to a string in JavaScript?"
+a. numToString()
+b. String()
+c. numberToString()
+d. convertToString()
+
+**Answer: b. String()
+
+question:"How can you round a number to the nearest integer in JavaScript?"
+a. Math.round()
+b. Math.floor()
+c. Math.ceil()
+d. Math.trunc()
+
+**Answer: a. Math.round()
+
+question:"What does the "prototype" property in JavaScript objects allow you to do?"
+a. Define methods and properties for all instances of an object
+b. Access the parent object's properties
+c. Create new object instances
+d. Set the object's prototype to null
+
+**Answer: a. Define methods and properties for all instances of an object
+
+question:"How can you change the text content of an HTML element using JavaScript?"
+a. element.textContent
+b. element.innerText
+c. element.innerHTML
+d. element.textContent()
+
+**Answer: a. element.textContent
+
+question:"What is the purpose of the "event.preventDefault()" method in JavaScript?"
+a. It stops the event from occurring.
+b. It starts a new event.
+c. It changes the event's target.
+d. It logs the event to the console.
+
+**Answer: a. It stops the event from occurring.
+
+question:"How can you insert a new node before an existing node in the DOM using JavaScript?"
+a. insertBefore()
+b. appendChild()
+c. insertNodeBefore()
+d. createNodeBefore()
+
+**Answer: a. insertBefore()
+
+question:"What is the primary purpose of a constructor function in JavaScript?"
+a. To create new arrays
+b. To define custom objects
+c. To perform mathematical operations
+d. To handle exceptions
+
+**Answer: b. To define custom objects
+
+question:"Which JavaScript method is used to get the current URL of a browser window?"
+a. getCurrentURL()
+b. window.location.getCurrentURL()
+c. window.location.href
+d. getURL()
+
+**Answer: c. window.location.href
+
+question:"How can you test if a specific attribute exists in the DOM using JavaScript?"
+a. element.getAttribute()
+b. element.hasAttribute()
+c. element.checkAttribute()
+d. element.testAttribute()
+
+**Answer: b. element.hasAttribute()
+
+question:"What does the "throw" keyword do in JavaScript?"
+a. It generates random errors.
+b. It catches exceptions.
+c. It terminates a script.
+d. It throws custom errors.
+
+**Answer: d. It throws custom errors.
+
+question:"What is the primary use of handling events within JavaScript?"
+a. To change the content of web pages
+b. To control loop iterations
+c. To respond to user interactions and trigger actions
+d. To perform mathematical calculations
+
+**Answer: c. To respond to user interactions and trigger actions.
+
+question:"Which method is used to remove an element from the DOM in JavaScript?"
+a. removeElement()
+b. deleteNode()
+c. parentNode.removeChild()
+d. hideElement()
+
+**Answer: c. parentNode.removeChild()
+
+question:"What is the purpose of a "try...catch" block in JavaScript?"
+a. To try multiple conditions in a single statement
+b. To execute code repeatedly
+c. To handle exceptions and provide a fallback if an error occurs
+d. To generate random numbers
+
+**Answer: c. To handle exceptions and provide a fallback if an error occurs.
+
+question:"How can you set the style of an HTML element using JavaScript?"
+a. element.style.setProperty()
+b. element.style.addStyle()
+c. element.addStyle()
+d. element.style.set()
+
+**Answer: a. element.style.setProperty()
+
+question:"`What does the "parentElement" property in the DOM allow you to access?"
+a. The parent node of an element
+b. The child elements of a parent
+c. The siblings of an element
+d. The ancestor elements of an element
+
+**Answer: a. The parent node of an element -->
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+In JavaScript, what is a closure?"
+a. A variable that can only be accessed within a specific function
+b. A function that is defined inside another function and has access to the outer function's variables
+c. A variable with a global scope
+d. A reserved keyword used for error handling
+
+**Answer: b. A function that is defined inside another function and has access to the outer function's variables
+
+What is the purpose of the "call" and "apply" methods in JavaScript?"
+a. To create new arrays
+b. To apply styles to elements
+c. To call functions with a specific "this" value and arguments
+d. To change the current URL of a browser window
+
+**Answer: c. To call functions with a specific "this" value and arguments
+
+When using regular expressions in JavaScript, what does the "exec" method return if a match is found?"
+a. The input string
+b. The matched value
+c. The regular expression pattern
+d. The index of the match
+
+**Answer: b. The matched value
+
+What is the purpose of the "bind" method in JavaScript?"
+a. To create new objects
+b. To change the type of a variable
+c. To create a new function with a specific "this" value
+d. To manipulate the DOM
+
+**Answer: c. To create a new function with a specific "this" value
+
+In JavaScript, what does the "new" keyword do when used with a constructor function?"
+a. It creates a new array
+b. It creates a new object instance
+c. It creates a new variable
+d. It removes an element from an array
+
+**Answer: b. It creates a new object instance
+
+Which event in JavaScript is triggered when an element loses focus, such as when a user clicks outside an input field?"
+a. click
+b. focus
+c. blur
+d. mouseover
+
+**Answer: c. blur
+
+What is the primary purpose of a try...catch...finally block in JavaScript?"
+a. To try multiple conditions in a single statement
+b. To create custom events
+c. To handle exceptions and ensure specific code always executes
+d. To control loop iterations
+
+**Answer: c. To handle exceptions and ensure specific code always executes
+
+How can you access the value of a CSS property applied to an HTML element using JavaScript?"
+a. element.style.getValue()
+b. window.getComputedStyle(element).getPropertyValue()
+c. element.getCSSProperty()
+d. element.getAttribute("style")
+
+**Answer: b. window.getComputedStyle(element).getPropertyValue()
+
+In JavaScript, what is the purpose of the "splice" method when used with arrays?"
+a. To add a new element to the end of an array
+b. To remove a specific element by index
+c. To concatenate two arrays
+d. To reverse the order of array elements
+
+**Answer: b. To remove a specific element by index
+
+How can you prevent a script from running if a user has disabled JavaScript in their browser?"
+a. You cannot prevent it; the script will always run.
+b. Use a try...catch block to catch the JavaScript-disabled error.
+c. Check the value of the "navigator" object to detect JavaScript support.
+d. Use the "defer" attribute in the script tag.
+
+**Answer: a. You cannot prevent it; the script will always run. -->
